@@ -1,0 +1,32 @@
+{
+  "gateway": {
+    "mode": "local",
+    "bind": "loopback",
+    "port": 18789
+  },
+  "models": {
+    "providers": {
+      "anthropic": {},
+      "openai": {},
+      "groq": {}
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-opus-4-5",
+        "fallback": "openai/gpt-4o"
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  },
+  "skills": {
+    "paths": ["skills/secondbrain-amoos"]
+  }
+}
